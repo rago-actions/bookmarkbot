@@ -1,0 +1,24 @@
+{
+  "apps": {
+    "slack-platform-dev": {
+      "name": "slack-platform-dev",
+      "app_id": "A02J8NA37BQ",
+      "team_id": "T029AAKMXGF",
+      "triggers": {
+        "dinome_slash_command": "Ft02J0PSJ45V"
+      }
+    }
+  },
+  "default": "slack-platform-dev",
+  "dev": {
+    "U02HT3FGQM9": {
+      "name": "dev",
+      "app_id": "A02JHKVFAA0",
+      "team_id": "T029AAKMXGF",
+      "user_id": "U02HT3FGQM9",
+      "triggers": {
+        "dinome_slash_command": "Ft02JFE18U4T"
+      }
+    }
+  }
+}

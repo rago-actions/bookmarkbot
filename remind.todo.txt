@@ -1,0 +1,26 @@
+The /remind command is one of Slackbot’s most useful features. 
+You can use it to remind yourself 
+- to do a task, 
+- to read an article or 
+- to build some kind of dark matter generator. 
+
+Slackbot is also able to send someone else a reminder, and even set reminders to recur.
+
+
+Remind yourself
+/remind me to mow the front lawn on saturday morning
+
+Remind someone else
+/remind @iappikonda to confirm attendance to the webinar tomorrow at 3pm
+
+Remind a channel
+/remind #project-fmt-api to go on Zoom for the weekly meeting every tuesday at 9am
+
+Set a recurring reminder
+/remind me to clear out temporary files every week starting next monday
+/remind me to send my invoice on the 1st of every month
+
+See a list of your reminders
+/remind list
+
+With the list, you can snooze reminders or mark them as complete with a single click.
