@@ -1,9 +1,9 @@
-import { Project } from "slack-cloud-sdk/mod";
-import { BookmarkList } from "./functions/bookmarklist";
-import { BookmarkAdd } from "./functions/bookmarkadd";
-import { BookmarkWorkflow } from "./workflows/bookmarkadd-workflow";
-import { BookmarkSlashCmd } from "./triggers/bookmark_slash_command";
-import { Bookmarks } from "./tables/bookmarks-table";
+import { Project } from "slack-cloud-sdk/mod.ts";
+import { BookmarkList } from "./functions/bookmarklist.ts";
+import { BookmarkAdd } from "./functions/bookmarkadd.ts";
+import { BookmarkWorkflow } from "./workflows/bookmarkadd-workflow.ts";
+import { BookmarkSlashCmd } from "./triggers/bookmark_slash_command.ts";
+import { Bookmarks } from "./tables/bookmarks-table.ts";
 
 Project({
   name: "BookmarkBot",
