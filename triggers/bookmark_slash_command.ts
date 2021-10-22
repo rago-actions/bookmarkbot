@@ -1,11 +1,12 @@
 import { DefineTrigger, TriggerTypes } from "slack-cloud-sdk/mod.ts";
-import { BookmarkWorkflow } from "../workflows/bookmarkadd-workflow";
+import { BookmarkWorkflow } from "../workflows/bookmarkadd-workflow.ts";
 
 export const BookmarkSlashCmd = DefineTrigger("bookmark_slash_command", {
   type: TriggerTypes.SlashCommand,
-  name: "/bookmark add",
+  name: "/bookmark",
   usage_hint: "Would you like to add a bookmark?",
-  description: "adds new bookmark ( needs name of the book, complete url)",
+  description:
+    "adds new bookmark ( needs name of the bookmark, complete url to bookmark )",
 })
   .runs(BookmarkWorkflow)
   .withInputs((ctx) => ({

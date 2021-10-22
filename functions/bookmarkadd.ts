@@ -1,5 +1,5 @@
 import { DefineFunction, Schema } from "slack-cloud-sdk/mod.ts";
-import { Bookmarks } from "./tables/bookmarks-table.ts";
+import { Bookmarks } from "../tables/bookmarks-table.ts";
 
 export const BookmarkAdd = DefineFunction(
   "bookmarkadd",
@@ -7,7 +7,7 @@ export const BookmarkAdd = DefineFunction(
     title: "BookmarkAdd",
     description: "adds a link as a bookmark",
     input_parameters: {
-      bookmark_id: {
+      id: {
         type: Schema.types.string,
         description: "Unique id for the bookmark",
       },
@@ -19,7 +19,7 @@ export const BookmarkAdd = DefineFunction(
         type: Schema.types.string,
         description: "bookmark complete url",
       },
-      user_id: {
+      user: {
         type: Schema.slack.types.user_id,
         description: "The requester user id",
       },
@@ -34,7 +34,7 @@ export const BookmarkAdd = DefineFunction(
   },
   async ({ inputs, client }) => {
     console.log(
-      `adding a bookmark Bookmarkname = ${inputs.bookmark_name} BookamrkURL = ${inputs.bookmark_url} for ${inputs.user_id}`,
+      `adding a bookmark Bookmarkname = ${inputs.bookmark_name} BookamrkURL = ${inputs.bookmark_url} for ${inputs.user}`,
     );
 
     //generate the ID
@@ -45,10 +45,10 @@ export const BookmarkAdd = DefineFunction(
 
     //add the request
     const result = await bookmarksTable.put({
-      bookmark_id: bookmarkid,
+      id: bookmarkid,
       bookmark_name: inputs.bookmark_name,
       bookmark_url: inputs.bookmark_url,
-      user_id: inputs.user_id,
+      user: inputs.user,
     });
     console.log(`bookmark added ${JSON.stringify(result)}`);
 

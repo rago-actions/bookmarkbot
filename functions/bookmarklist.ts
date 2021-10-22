@@ -1,5 +1,6 @@
-import { DefineFunction, Schema } from "slack-cloud-sdk/mod";
-import { Bookmarks } from "./tables/bookmarks-table.ts";
+import { DefineFunction, Schema } from "slack-cloud-sdk/mod.ts";
+import { Bookmarks } from "../tables/bookmarks-table.ts";
+import { moment } from "moment";
 
 export const BookmarkList = DefineFunction(
   "bookmarklist",
@@ -8,7 +9,7 @@ export const BookmarkList = DefineFunction(
     description: "Lists all the added bookmarks for the User",
     input_parameters: {
       user_id: {
-        type: Schema.types.user_id,
+        type: Schema.slack.types.user_id,
         description: "The requester user id",
       },
     },

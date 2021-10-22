@@ -5,7 +5,7 @@
       "app_id": "A02J8NA37BQ",
       "team_id": "T029AAKMXGF",
       "triggers": {
-        "dinome_slash_command": "Ft02J0PSJ45V"
+        "bookmark_slash_command": "Ft02JJ0WD9GE"
       }
     }
   },
@@ -17,7 +17,7 @@
       "team_id": "T029AAKMXGF",
       "user_id": "U02HT3FGQM9",
       "triggers": {
-        "dinome_slash_command": "Ft02JFE18U4T"
+        "bookmark_slash_command": "Ft02K3ANB849"
       }
     }
   }

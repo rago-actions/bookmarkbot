@@ -1,4 +1,4 @@
-import { DefineFunction, Schema } from "slack-cloud-sdk/mod";
+import { DefineFunction, Schema } from "slack-cloud-sdk/mod.ts";
 import { _Bookmarks } from "./tables/bookmarks-table.ts";
 
 export const BookmarkDelete = DefineFunction(

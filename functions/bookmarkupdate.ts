@@ -1,13 +1,13 @@
-import { DefineFunction, Schema } from "slack-cloud-sdk/mod";
-import { _Bookmarks } from "./tables/bookmarks-table.ts";
+import { DefineFunction, Schema } from "slack-cloud-sdk/mod.ts";
+import { Bookmarks } from "../tables/bookmarks-table.ts";
 
-export const BookmarkUpdate = DefineFunction(
+export const BookmarkUpdate = DefineFunction( 
   "bookmarkupdate",
   {
     title: "BookmarkUpdate",
     description: "Updates new link with an existing bookmark link",
     input_parameters: {
-      bookmark_id: {
+      id: {
         type: Schema.types.string,
         description: "Unique id for the bookmark",
       },

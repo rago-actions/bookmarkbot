@@ -1,4 +1,4 @@
-import { DefineTable, Schema } from "slack-cloud-sdk/mod";
+import { DefineTable, Schema } from "slack-cloud-sdk/mod.ts";
 
 // Here's a sample Table definition :)
 // To include this in your project, you'll want to add it in your project.ts like so:
@@ -13,9 +13,9 @@ import { DefineTable, Schema } from "slack-cloud-sdk/mod";
  * });
  */
 export const Bookmarks = DefineTable("bookmarks", {
-  primary_key: "bookmark_id",
+  primary_key: "id",
   columns: {
-    bookmark_id: {
+    id: {
       type: Schema.types.string,
     },
     bookmark_name: {
@@ -24,8 +24,8 @@ export const Bookmarks = DefineTable("bookmarks", {
     bookmark_url: {
       type: Schema.types.string,
     },
-    user_id: {
-      type: Schema.types.user_id,
+    user: {
+      type: Schema.slack.types.user_id,
     },
   },
 });
